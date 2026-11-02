@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "excel-git-local"
+version = "0.1.0"
+description = "A small local-first Excel version manager for learning Git and Python"
+requires-python = ">=3.10"
+dependencies = ["openpyxl>=3.1.5,<4"]
+
+[project.scripts]
+excelgit = "excelgit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["excelgit*"]
